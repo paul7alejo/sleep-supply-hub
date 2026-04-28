@@ -11,6 +11,7 @@ import Equipment from "./pages/Equipment";
 import Reorder from "./pages/Reorder";
 import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import OrderConfirmed from "./pages/OrderConfirmed";
 import Account from "./pages/Account";
@@ -38,6 +39,8 @@ const App = () => (
               <Route path="/portal/reorder" element={<Reorder />} />
               <Route path="/portal/shop" element={<Shop />} />
               <Route path="/portal/shop/:slug" element={<ProductDetail />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/portal/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/portal/checkout" element={<Checkout />} />
               <Route path="/order-confirmed" element={<OrderConfirmed />} />
