@@ -1,5 +1,5 @@
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { ClipboardList, Contact, HeartPulse, Home, Package, ShoppingBag, User, Wrench, LogOut } from 'lucide-react';
+import { ClipboardList, Contact, HeartPulse, Home, Package, ShoppingCart, ShoppingBag, User, Wrench, LogOut } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { cn } from '@/lib/utils';
 
@@ -8,12 +8,13 @@ const nav = [
   { label: 'My Equipment', path: '/portal/equipment', icon: Package },
   { label: 'Request Supplies', path: '/portal/reorder', icon: ClipboardList },
   { label: 'Shop', path: '/portal/shop', icon: ShoppingBag },
+  { label: 'Cart', path: '/portal/cart', icon: ShoppingCart },
   { label: 'Maintenance', path: '/portal/maintenance', icon: Wrench },
   { label: 'Contact', path: '/portal/contact', icon: Contact },
   { label: 'Profile', path: '/portal/profile', icon: User },
 ];
 
-const mobileNav = nav.filter((item) => ['Dashboard', 'My Equipment', 'Request Supplies', 'Shop', 'Profile'].includes(item.label));
+const mobileNav = nav.filter((item) => ['Dashboard', 'My Equipment', 'Request Supplies', 'Shop', 'Cart'].includes(item.label));
 
 export function PortalLayout({ children }: { children: React.ReactNode }) {
   const { user, logout } = useAuth();
